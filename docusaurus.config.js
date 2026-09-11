@@ -69,25 +69,32 @@ const config = {
       navbar: {
         title: 'Open Digital Acquiring',
         logo: {
-          alt: 'Open Digital Acquiring Logo',
-          src: 'img/logo.svg',
+          alt: 'Open Digital Acquiring',
+          src: 'img/logo-square.svg',
+          width: 20,
+          height: 20,
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/docs/raast-p2m-acquiring-suite',
             position: 'left',
-            label: 'Docs',
+            label: 'Read the docs',
           },
           {
             href: 'https://github.com/paysyslab/OpenDigitalAcquiring-Sandbox',
             label: 'GitHub',
+            position: 'left',
+          },
+          {
+            href: 'mailto:hammad.ali@paysyslabs.com?subject=Partner%20access%20request',
+            label: 'Request access ↗',
             position: 'right',
+            className: 'navbar__cta',
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
         links: [
           {
             title: 'Docs',
@@ -108,7 +115,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Paysys Labs. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} Paysys Labs. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

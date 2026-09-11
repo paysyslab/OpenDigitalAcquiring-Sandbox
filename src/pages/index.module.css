@@ -1,23 +1,207 @@
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * and scoped locally. Colors here are fixed (not tied to --ifm- theme
+ * variables) so the hero always renders dark, regardless of the
+ * site's light/dark toggle.
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+  background-color: #0b0f12;
+  color: #e6e8eb;
+  padding: 4rem 2rem 3rem;
+}
+
+.heroGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 3rem;
+  align-items: start;
 }
 
 @media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+  .heroGrid {
+    grid-template-columns: 1fr;
   }
+  .heroBanner {
+    padding: 2.5rem 1.25rem;
+  }
+}
+
+.heroCopy {
+  text-align: left;
+}
+
+.heroEyebrow {
+  color: #34e2a0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1.25rem;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #aeb4ba;
+  max-width: 40rem;
+  margin-bottom: 2rem;
 }
 
 .buttons {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.primaryButton {
+  background-color: #34e2a0;
+  color: #0b0f12;
+}
+
+.primaryButton:hover {
+  background-color: #5be8b3;
+  color: #0b0f12;
+  text-decoration: none;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #e6e8eb;
+  border: 1px solid #3a3f44;
+}
+
+.secondaryButton:hover {
+  border-color: #6b7278;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  border-top: 1px solid #23262a;
+  padding-top: 1.75rem;
+}
+
+@media screen and (max-width: 600px) {
+  .statsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.statTitle {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.statDescription {
+  color: #8a9096;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.heroPanel {
+  display: flex;
+}
+
+.codePanel {
+  width: 100%;
+  background-color: #12161a;
+  border: 1px solid #23262a;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.82rem;
+}
+
+.codePanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #23262a;
+  color: #8a9096;
+}
+
+.codePanelStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #34e2a0;
+}
+
+.statusDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #34e2a0;
+  display: inline-block;
+}
+
+.codePanelBody {
+  padding: 1rem;
+  color: #d6dadd;
+}
+
+.codeLine {
+  margin-bottom: 0.4rem;
+}
+
+.codeMethod {
+  color: #34e2a0;
+  font-weight: 700;
+}
+
+.codeMuted {
+  color: #6b7278;
+  margin-bottom: 0.25rem;
+  word-break: break-all;
+}
+
+.codeGap {
+  height: 0.75rem;
+}
+
+.codeJson {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: #d6dadd;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.codePanelFooter {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid #23262a;
+  color: #6b7278;
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.8rem;
+  line-height: 1.5;
 }

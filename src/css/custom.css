@@ -28,3 +28,38 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* The navbar is always dark, matching the homepage hero, regardless of the
+   light/dark toggle (which still applies to doc content below it). */
+.navbar {
+  background-color: #0b0f12;
+  --ifm-navbar-link-color: #e6e8eb;
+}
+
+.navbar__brand,
+.navbar__title,
+.navbar__link {
+  color: #e6e8eb;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #34e2a0;
+}
+
+.navbar__toggle {
+  color: #e6e8eb;
+}
+
+.navbar__cta {
+  background-color: #f1f3f5;
+  color: #0b0f12 !important;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem !important;
+  margin-left: 0.5rem;
+}
+
+.navbar__cta:hover {
+  background-color: #ffffff;
+  text-decoration: none;
+}
