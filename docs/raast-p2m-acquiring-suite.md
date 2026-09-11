@@ -35,9 +35,9 @@ sidebar_position: 1
 
 ## 1. Executive Summary
 
-Paysys Labs is extending the **RAAST P2M Acquiring Suite** — part of the broader **Open Digital Acquiring** product line — to banking corporates and partners across Pakistan and international geographies (Tanzania, Togo). None of these partners currently expose a production or UAT core-banking connection to us, and none of us expose one to them on day one either.
+Tapsys is extending the **RAAST P2M Acquiring Suite** — part of the broader **Open Digital Acquiring** product line — to banking corporates and partners across Pakistan and international geographies (Tanzania, Togo).
 
-Historically, this created a hard bottleneck before any integration work could even start:
+Historically, the main bottleneck before any integration work could even start were to:
 
 - **VPN provisioning and network-access requests** between two corporates routinely take weeks — security reviews, firewall change tickets, IP whitelisting, VPN certificate exchange — before a single API call can be attempted.
 - **The Technical Specification Document (TSD)** — a 30+ page PDF — would float between business, technical, and partner teams over email, with no way for anyone to actually *try* a request against it.
