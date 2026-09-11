@@ -85,7 +85,6 @@ The mechanism that makes "no VPN, no rewrite later" real is a pattern applied id
 |---|---|---|
 | Domain interface | Defines the contract once per domain | `interface QrService` |
 | Mock implementation | Simulates the domain in-memory — timers, state machines, real EMVCo QR generation, no external calls | `MockQrService` (active today) |
-| Live implementation | Plumbing to call a real upstream service, wired against the *same* DTOs, dormant until pointed at a real URL | `LiveQrService` (dormant until go-live) |
 | Router | Picks Mock or Live per request, flippable at runtime, no restart | `QrRouter` |
 
 ## 4. System Architecture & Technical Specification
@@ -304,7 +303,7 @@ Returns onboarding-form metadata (field name, data type, required flag, step gro
 
 #### `POST /api/v2/merchant/generateInstantMerchantQR` — Generate Instant Merchant QR (TSD 3.26)
 
-Accepts a merchant-uploaded QR artwork/attachment plus contact metadata (`multipart/form-data`: `attachment`, `sourceMid`, `emailValuesMap`). In a live system, dispatches the QR to the merchant by email/SFTP; the sandbox simply acknowledges receipt.
+Accepts a merchant-uploaded QR artwork/attachment plus contact metadata (`multipart/form-data`: `attachment`, `sourceMid`, `emailValuesMap`). 
 
 **Errors:** 130 (500) only in the sandbox path.
 
