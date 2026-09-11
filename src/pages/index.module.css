@@ -8,24 +8,25 @@
 .heroBanner {
   background-color: #0b0f12;
   color: #e6e8eb;
-  padding: 4rem 2rem 3rem;
+  padding: 5.5rem 2rem 4.5rem;
 }
 
 .heroGrid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 3rem;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 4rem;
   align-items: start;
 }
 
 @media screen and (max-width: 996px) {
   .heroGrid {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
   .heroBanner {
-    padding: 2.5rem 1.25rem;
+    padding: 3rem 1.25rem;
   }
 }
 
@@ -36,32 +37,34 @@
 .heroEyebrow {
   color: #34e2a0;
   font-family: var(--ifm-font-family-monospace);
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+  margin: 0 0 1.25rem;
 }
 
 .heroTitle {
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(2.1rem, 3.6vw, 3.15rem);
+  line-height: 1.12;
   font-weight: 800;
+  letter-spacing: -0.01em;
   color: #ffffff;
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.5rem;
+  max-width: 34rem;
 }
 
 .heroSubtitle {
   font-size: 1.05rem;
-  line-height: 1.6;
-  color: #aeb4ba;
-  max-width: 40rem;
-  margin-bottom: 2rem;
+  line-height: 1.65;
+  color: #9aa1a8;
+  max-width: 34rem;
+  margin: 0 0 2.25rem;
 }
 
 .buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.9rem;
-  margin-bottom: 2.5rem;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
 }
 
 .primaryButton,
@@ -70,10 +73,10 @@
   align-items: center;
   gap: 0.4rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.75rem 1.3rem;
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.8rem 1.4rem;
   border-radius: 6px;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
 
 .primaryButton {
@@ -89,12 +92,13 @@
 
 .secondaryButton {
   background-color: transparent;
-  color: #e6e8eb;
-  border: 1px solid #3a3f44;
+  color: #ffffff;
+  border: 1px solid #2b3036;
 }
 
 .secondaryButton:hover {
-  border-color: #6b7278;
+  border-color: #4a5057;
+  background-color: #12161a;
   color: #ffffff;
   text-decoration: none;
 }
@@ -102,9 +106,11 @@
 .statsRow {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  border-top: 1px solid #23262a;
-  padding-top: 1.75rem;
+  column-gap: 2.5rem;
+  row-gap: 1.5rem;
+  max-width: 34rem;
+  border-top: 1px solid #1c2127;
+  padding-top: 2rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -115,13 +121,14 @@
 
 .statTitle {
   font-weight: 700;
+  font-size: 0.95rem;
   color: #ffffff;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
 }
 
 .statDescription {
-  color: #8a9096;
-  font-size: 0.9rem;
+  color: #7d8489;
+  font-size: 0.85rem;
   line-height: 1.5;
 }
 
@@ -132,20 +139,20 @@
 .codePanel {
   width: 100%;
   background-color: #12161a;
-  border: 1px solid #23262a;
+  border: 1px solid #1f242a;
   border-radius: 10px;
   overflow: hidden;
   font-family: var(--ifm-font-family-monospace);
-  font-size: 0.82rem;
+  font-size: 0.8rem;
 }
 
 .codePanelHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #23262a;
-  color: #8a9096;
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid #1f242a;
+  color: #7d8489;
 }
 
 .codePanelStatus {
@@ -164,12 +171,12 @@
 }
 
 .codePanelBody {
-  padding: 1rem;
+  padding: 1.25rem;
   color: #d6dadd;
 }
 
 .codeLine {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
 }
 
 .codeMethod {
@@ -178,30 +185,33 @@
 }
 
 .codeMuted {
-  color: #6b7278;
-  margin-bottom: 0.25rem;
+  color: #5f6569;
+  margin-bottom: 0.3rem;
   word-break: break-all;
 }
 
 .codeGap {
-  height: 0.75rem;
+  height: 0.9rem;
 }
 
 .codeJson {
   margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
   white-space: pre-wrap;
   word-break: break-word;
   color: #d6dadd;
   font-family: var(--ifm-font-family-monospace);
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.78rem;
+  line-height: 1.6;
 }
 
 .codePanelFooter {
-  padding: 0.85rem 1rem;
-  border-top: 1px solid #23262a;
-  color: #6b7278;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid #1f242a;
+  color: #7d8489;
   font-family: var(--ifm-font-family-base);
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }

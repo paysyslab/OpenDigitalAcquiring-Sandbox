@@ -64,7 +64,9 @@ const config = {
     ({
       image: 'img/docusaurus-social-card.jpg',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Open Digital Acquiring',
@@ -81,41 +83,12 @@ const config = {
             label: 'Read the docs',
           },
           {
-            href: 'https://github.com/paysyslab/OpenDigitalAcquiring-Sandbox',
-            label: 'GitHub',
-            position: 'left',
-          },
-          {
             href: 'mailto:hammad.ali@paysyslabs.com?subject=Partner%20access%20request',
             label: 'Request access ↗',
             position: 'right',
             className: 'navbar__cta',
           },
         ],
-      },
-      footer: {
-        style: 'light',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'RAAST P2M Acquiring Suite',
-                to: '/docs/raast-p2m-acquiring-suite',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/paysyslab/OpenDigitalAcquiring-Sandbox',
-              },
-            ],
-          },
-        ],
-        copyright: `© ${new Date().getFullYear()} Paysys Labs. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,

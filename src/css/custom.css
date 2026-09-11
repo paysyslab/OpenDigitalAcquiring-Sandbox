@@ -33,33 +33,62 @@
    light/dark toggle (which still applies to doc content below it). */
 .navbar {
   background-color: #0b0f12;
-  --ifm-navbar-link-color: #e6e8eb;
+  box-shadow: none;
+  border-bottom: 1px solid #1c2127;
+  height: 4.25rem;
+  padding: 0 2rem;
+  --ifm-navbar-link-color: #d6dadd;
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__brand {
+  margin-right: 2.5rem;
+}
+
+.navbar__logo {
+  margin-right: 0.6rem;
 }
 
 .navbar__brand,
-.navbar__title,
+.navbar__title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
 .navbar__link {
-  color: #e6e8eb;
+  color: #d6dadd;
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 
 .navbar__link:hover,
 .navbar__link--active {
-  color: #34e2a0;
+  color: #ffffff;
 }
 
 .navbar__toggle {
   color: #e6e8eb;
 }
 
+.navbar__items--right {
+  gap: 0.5rem;
+}
+
 .navbar__cta {
-  background-color: #f1f3f5;
+  background-color: #ffffff;
   color: #0b0f12 !important;
   border-radius: 6px;
-  padding: 0.4rem 0.9rem !important;
-  margin-left: 0.5rem;
+  padding: 0.5rem 1rem !important;
+  font-weight: 600;
+  font-size: 0.85rem;
 }
 
 .navbar__cta:hover {
-  background-color: #ffffff;
+  background-color: #e6e8eb;
   text-decoration: none;
 }
