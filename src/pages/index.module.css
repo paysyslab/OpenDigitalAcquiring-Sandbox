@@ -67,6 +67,16 @@
   margin-bottom: 3rem;
 }
 
+@keyframes floatButton {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .primaryButton,
 .secondaryButton {
   display: inline-flex;
@@ -77,6 +87,7 @@
   line-height: 1;
   padding: 0.8rem 1.4rem;
   border-radius: 6px;
+  animation: floatButton 3.2s ease-in-out infinite;
 }
 
 .primaryButton {
@@ -85,22 +96,29 @@
 }
 
 .primaryButton:hover {
+  animation: none;
+  transform: translateY(-4px);
   background-color: #5be8b3;
   color: #0b0f12;
   text-decoration: none;
+  box-shadow: 0 10px 24px rgba(52, 226, 160, 0.28);
 }
 
 .secondaryButton {
   background-color: transparent;
   color: #ffffff;
   border: 1px solid #2b3036;
+  animation-delay: 1.6s;
 }
 
 .secondaryButton:hover {
+  animation: none;
+  transform: translateY(-4px);
   border-color: #4a5057;
   background-color: #12161a;
   color: #ffffff;
   text-decoration: none;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 .statsRow {

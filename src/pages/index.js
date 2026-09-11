@@ -56,8 +56,7 @@ function RequestCard() {
         </pre>
       </div>
       <div className={styles.codePanelFooter}>
-        Same request/response contract as TSD-Acq-API-GW v1.17 — swap the base
-        URL when a real bank connection exists.
+        Same request/response contract as TSD-Acq-API-GW v1.17.
       </div>
     </div>
   );

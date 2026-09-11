@@ -80,15 +80,18 @@
 }
 
 .navbar__cta {
-  background-color: #ffffff;
-  color: #0b0f12 !important;
-  border-radius: 6px;
-  padding: 0.5rem 1rem !important;
-  font-weight: 600;
-  font-size: 0.85rem;
+  color: #d6dadd !important;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 .navbar__cta:hover {
-  background-color: #e6e8eb;
+  color: #ffffff !important;
   text-decoration: none;
+}
+
+/* Docusaurus auto-appends an external-link icon to href navbar items;
+   this CTA should read as a plain nav link, so hide it. */
+.navbar__cta svg {
+  display: none;
 }

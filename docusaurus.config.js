@@ -69,12 +69,12 @@ const config = {
         respectPrefersColorScheme: false,
       },
       navbar: {
-        title: 'Open Digital Acquiring',
+        title: '',
         logo: {
-          alt: 'Open Digital Acquiring',
-          src: 'img/logo-square.svg',
-          width: 20,
-          height: 20,
+          alt: 'Tapsys',
+          src: 'img/tapsys-logo.svg',
+          width: 90,
+          height: 28,
         },
         items: [
           {
@@ -84,7 +84,7 @@ const config = {
           },
           {
             href: 'mailto:hammad.ali@paysyslabs.com?subject=Partner%20access%20request',
-            label: 'Request access ↗',
+            label: 'Request access',
             position: 'right',
             className: 'navbar__cta',
           },

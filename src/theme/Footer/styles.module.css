@@ -23,17 +23,18 @@
 }
 
 .logoMark {
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background-color: #34e2a0;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  background-color: #0b0f12;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
   flex-shrink: 0;
 }
 
-.brandName {
-  font-weight: 700;
-  color: #16181a;
+.logoImg {
+  height: 16px;
+  width: auto;
+  display: block;
 }
 
 .brandMeta {
