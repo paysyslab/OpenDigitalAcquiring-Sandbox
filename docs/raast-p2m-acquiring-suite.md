@@ -1,16 +1,9 @@
 ---
 id: raast-p2m-acquiring-suite
-title: RAAST P2M Acquiring Suite — Partner Integration & Technical Reference
+title: P2M Acquiring Suite — Partner Integration & Technical Reference
 sidebar_label: RAAST P2M Acquiring Suite
 sidebar_position: 1
 ---
-
-**Document type:** Enterprise Partner Integration Guide
-**Product:** Open Digital Acquiring — RAAST P2M Acquiring Sandbox
-**Prepared for:** Corporate & Banking Partners, Business/Sales Teams, Integration Engineers
-**Owner:** Anas Khan, PMO — Paysys Labs / Tapsys Services
-**Reference Spec:** TSD-Acq-API-GW v1.17
-**Status:** Sandbox Complete — Draft v0.1
 
 ## Table of Contents
 
