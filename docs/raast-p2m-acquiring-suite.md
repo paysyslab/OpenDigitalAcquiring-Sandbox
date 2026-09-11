@@ -28,7 +28,7 @@ sidebar_position: 1
 
 ## 1. Executive Summary
 
-Tapsys is extending the **RAAST P2M Acquiring Suite** — part of the broader **Open Digital Acquiring** product line — to banking corporates and partners across Pakistan and international geographies (Tanzania, Togo).
+Tapsys is extending the **P2M Acquiring Suite** — part of the broader **Open Digital Acquiring** product line — to banking corporates and partners across Pakistan and international geographies (Tanzania, Togo).
 
 Historically, the main bottleneck before any integration work could even start were to:
 
@@ -36,7 +36,7 @@ Historically, the main bottleneck before any integration work could even start w
 - **The Technical Specification Document (TSD)** — a 30+ page PDF — would float between business, technical, and partner teams over email, with no way for anyone to actually *try* a request against it.
 - Sales and business teams had **no way to demo** SQRC/DQRC generation or Request-to-Pay to a prospective partner without looping in engineering for a bespoke, one-off setup every time.
 
-**This sandbox exists to remove that bottleneck entirely.** It is a fully working, self-serve simulation of the RAAST P2M Acquiring Gateway — implementing every endpoint in TSD-Acq-API-GW v1.17 with real request validation, real EMVCo-correct QR payloads, real maker-checker onboarding, and real state-machine behavior (timers, probability-weighted outcomes, one-time-use enforcement) — reachable over a normal internet connection, with no VPN, no firewall change, and no engineering hand-holding required.
+**This sandbox exists to remove that bottleneck entirely.** It is a fully working, self-serve simulation of the P2M Acquiring Gateway — implementing every endpoint in TSD-Acq-API-GW v1.17 with real request validation, real EMVCo-correct QR payloads, real maker-checker onboarding, and real state-machine behavior (timers, probability-weighted outcomes, one-time-use enforcement) — reachable over a normal internet connection, with no VPN, no firewall change, and no engineering hand-holding required.
 
 **The core value proposition:**
 
@@ -604,8 +604,7 @@ class AcquiringGatewayClient:
 
 | Element | Today (Sandbox) | What changes going live |
 |---|---|---|
-| Bank core / MPAY / RAAST | Simulated in-memory logic, per domain | Domain's Live service calls the real upstream — no controller/DTO change |
-| Merchant approval | Auto-approve only (no reject path) | Real maker-checker with a human reviewer decision |
+| Merchant approval | Manual-approve only (with reject path) | Real maker-checker with a human reviewer decision |
 | Database | H2, file-mode, single volume | Postgres/managed RDBMS with real backup and failover |
 | Tokens / sessions | Self-signed, sandbox-scoped only | Real signing keys, secret management, TLS-terminated edge |
 | Document uploads | Accepted, not persisted | Real file storage + validation |
@@ -615,10 +614,9 @@ class AcquiringGatewayClient:
 ### 11.2 Roadmap (phases are independent per domain)
 
 - **Phase 00 — Sandbox & governance** *(Complete)* — All endpoints, full portal parameter coverage, admin governance, real maker-checker onboarding pattern (auto-approve today, human-reviewer-ready).
-- **Phase 01 — First real bank-core connection** *(Next)* — Triggered by the first partner issuing sandbox/UAT credentials. Implement the matching Live service, point its base URL at the real endpoint, flip the provider flag — starting with the lowest-risk domain (typically auth or qr).
-- **Phase 02 — Production hardening** *(Planned)* — Postgres, real secret management, TLS-terminated edge, CORS locked to named partner origins, real document storage.
-- **Phase 03 — Multi-bank, multi-rail scale-out** *(Planned)* — Per-partner routing (same domain live for one bank, sandboxed for another), new endpoints from future TSD revisions, additional rails beyond RAAST as Tanzania/Togo geographies come online.
-- **Phase 04 — Compliance & operational readiness** *(Planned)* — Formal audit retention, incident runbooks, load/failure-mode testing against real timing.
+- **Phase 01 — Production hardening** *(Planned)* — Postgres, real secret management, TLS-terminated edge, CORS locked to named partner origins, real document storage.
+- **Phase 02 — Multi-bank, multi-rail scale-out** *(Planned)* — Per-partner routing (same domain live for one bank, sandboxed for another), new endpoints from future TSD revisions.
+- **Phase 03 — Compliance & operational readiness** *(Planned)* — Formal audit retention, incident runbooks, load/failure-mode testing against real timing.
 
 ---
 
